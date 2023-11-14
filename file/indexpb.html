@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durable</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+
+    }
+
+    .container-fluid {
+
+        height: 100px;
+    }
+
+
+
+    .container-fluid .navbar-brand img {
+        width: 200px;
+        height: 100px;
+    }
+
+
+    .navbar-nav {
+        color: black;
+        font-weight: 600px;
+        /* background-color: aqua */
+
+    }
+
+    .nav-item {
+        padding: 5px;
+        font-size: larger;
+    }
+
+
+    .nav-item a:hover {
+        color: brown
+    }
+
+
+
+    #about-section {
+        /* padding: 10px 40px ; */
+        background-color: #a20d2b;
+    }
+
+    .iconee {
+        display: flex;
+
+    }
+
+    #item4 {
+        padding: 5px;
+        font-size: 25px;
+        margin: 10px;
+        color: black;
+    }
+
+    #item4:hover {
+
+        color: brown;
+
+    }
+
+    #bed {
+        background-image: url(./images/bed2.avif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 800px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width:366px) {
+
+        #bed {
+
+            width: 100%;
+            height: 900px;
+
+
+        }
+
+
+    }
+
+    .ttext {
+        /* background-color: aliceblue; */
+        text-align: start;
+        display: grid;
+        justify-content: flex-start;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .type {
+        padding: 10px;
+        height: 400px;
+        width: 100%;
+        position: relative;
+        top: 60%;
+        /* background-color: yellowgreen; */
+
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+    .type p {
+        font-weight: 100;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        max-width: 1000px;
+        color: white;
+    }
+
+    .type h2 {
+        font-family: 'Kaushan Script', cursive;
+        color: rgb(255, 255, 255);
+        /* width: 10%; */
+        /* border-bottom: 1px solid black; */
+        font-weight: bold;
+        font-size: 60px;
+
+
+    }
+
+    #vn {
+        background-color: brown;
+        width: 30%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 20px;
+
+    }
+
+    #footer-section {
+
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+
+    }
+
+    #footer-p {
+        background-color: rgb(73, 1, 1);
+        margin-top: 5px;
+
+    }
+
+    footer {
+        padding: 40px 10% 0px;
+
+    }
+
+    .mai-footer {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+
+
+    }
+
+    footer ul {
+        list-style: none;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+    }
+
+    .mai-footer .footer ul li a {
+
+        font-size: 14px;
+        display: block;
+        padding: 5px;
+        color: white;
+
+    }
+
+    .footer ul li a:hover {
+        border-bottom: 1px solid black;
+        width: 60%;
+    }
+
+
+    .footer h2 {
+        margin-bottom: 8px;
+        color: white;
+        transition: all 1.0s ease;
+
+
+    }
+
+    .footer h2:hover {
+        transform: scale(1.1);
+        border-bottom: 2px solid crimson;
+        width: 70%;
+        /* background-color: red; */
+        text-align: center;
+    }
+
+    .ion {
+        display: flex;
+
+    }
+
+    .ion i {
+        color: white;
+        margin: 15px 10px 0px 0px;
+        font-weight: 500;
+        font-size: 25px;
+        transition: all 1.0s ease;
+    }
+
+    .ion i:hover {
+        transform: scale(1.1);
+        color: rgb(192, 1, 1);
+    }
+
+
+    .rights {
+
+        color: white;
+        padding: 4px;
+        text-align: center;
+
+    }
+
+    #tent {
+        text-decoration: none;
+        font-size: 19px;
+        color: white;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid  ">
+            <a class="navbar-brand" href=""><img src="./images/furniture-logo-removebg-preview.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" aria-current="page" href="index2.html">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Branded
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="./indexB.html">Durable</a></li>
+                            <li><a class="dropdown-item text-dark" href="./2brnd.html">Woodstar</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-dark" href="./brand3.html">Lovenearth</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="./indexp.html">Sofa</a></li>
+                            <li><a class="dropdown-item text-dark" href="./indexpb.html">Bed</a></li>
+                            <li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Local item
+
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="./indexc.html">chair</a></li>
+                            <li><a class="dropdown-item text-dark" href="./table.html">Table</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="iconee">
+
+            <a href="./contact.html"><i id="item4" class="fa-solid fa-phone"></i></a>
+
+            <i id="item4" class="fa-solid fa-cart-shopping"></i>
+
+            <i id="item4" class="fa-solid fa-heart"></i>
+
+        </div>
+    </nav>
+
+
+
+
+    <section id="bed">
+
+        <div class="ttext">
+
+            <div class="type">
+
+                <h2>Bed Set</h2>
+                <p>he concept of furniture first developed as early as 3100-2500 B.C. The first items created for
+                    household use were made of stone, as wood was not readily available during the Neolithic time
+                   s, period. Dressers, cupboards and beds were amongst the first forms of furniture. The dresser was said
+                    to be the most important piece of furniture in the beginning, as they faced the entrance of each
+                    house in Neolithic society and often displayed carved artwork of symbolic objects. Over the year
+                    especially in modern years, the concept of functional furniture in households exploded while keeping
+                    the artwork aspec</p>
+
+                <a href="./indexb1.html"><button id="vn">Vistt Sit</button></a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!--footer-section start-->
+
+    <footer id="footer-p">
+
+        <div class="mai-footer">
+
+            <div class="footer">
+
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="">Mattres</a></li>
+                    <li><a href="">Living Room</a></li>
+                    <li><a href="">Bedroom</a></li>
+                    <li><a href="">Cosatal</a></li>
+                    <li><a href="">Cottage</a></li>
+                </ul>
+            </div>
+            <div class="footer">
+
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Desgin service</a></li>
+                    <li><a href="">Carees</a></li>
+                    <li><a href="">Made in usa</a></li>
+                    <li><a href="">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer">
+
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="">Privacy poilcy</a></li>
+                    <li><a href="">ADA</a></li>
+                    <li><a href="">Vacation</a></li>
+                    <li><a href="">Protecition</a></li>
+                    <li><a href="">home</a></li>
+                </ul>
+            </div>
+            <div class="footer">
+
+                <h2>Durable</h2>
+
+                <a id="tent" href="">About Links</a>
+
+
+
+
+                <div class="ion">
+
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="rights">
+            <p>Copyrights © 2023. All Rights Bilal Devloment</p>
+        </div>
+
+
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

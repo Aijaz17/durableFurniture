@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durable cootage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+
+    }
+
+    .container-fluid {
+
+        height: 100px;
+        /* position: fixed; */
+        /* background-color: aqua */
+    }
+
+
+
+    .container-fluid .navbar-brand img {
+        width: 200px;
+        height: 100px;
+    }
+
+
+    .navbar-nav {
+        color: black;
+        font-weight: 600px;
+        /* background-color: aqua */
+
+    }
+
+    .nav-item {
+    padding: 5px;
+font-size: larger;
+}
+
+
+.nav-item a:hover{
+color: brown
+
+}
+    .container5 {
+
+        /* background-color: aqua; */
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    @media only screen and (max-width:914px) {
+        .container5 {
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+
+    }
+
+    @media only screen and (max-width:914px) {
+        .col {
+            text-align: center;
+
+        }
+
+    }
+
+    .left {
+        /* background-color: blue; */
+        padding: 10px;
+        width: 100%;
+        /* height: 400px; */
+        justify-content: center;
+    }
+
+    .left img {
+        width: 100%;
+        /* height: 300px; */
+    }
+
+    .left-col {
+        width: 100%;
+        padding: 10px;
+        /* background-color: yellow; */
+    }
+
+    .left-col h3 {
+        /* padding: 10px; */
+        font-size: 40px;
+        font-style: italic;
+        border-bottom: 1px solid black;
+        /* width: 30%; */
+        color: brown;
+
+    }
+
+    .left-col p {
+        max-width: 900px;
+        /* padding:10px; */
+        font-weight: 300px;
+    }
+
+    .col1 {
+        /* display:flex; */
+        /* justify-content:space-evenly; */
+        padding: 10px;
+        width: 100%;
+        /* background-color: yellowgreen; */
+
+    }
+
+    .col1 h5 {
+        color: rgb(113, 117, 101);
+    }
+
+    .col2 {
+        padding: 10px;
+        display: inline-block;
+        /* justify-content: space-evenly; */
+    }
+
+    .col2 h5 {
+        color: rgb(61, 96, 107);
+    }
+
+    #fn {
+        background-color: rgb(100, 19, 19);
+        padding: 10px;
+        border: transparent;
+        outline: transparent;
+
+        color: white;
+    }
+
+    #fn:hover {
+        background-color: rgb(177, 44, 21);
+
+    }
+
+    #footer-section{
+
+position: fixed;
+bottom: 0px;
+width: 100%;
+
+}
+
+#footer-p{
+background-color: rgb(73, 1, 1);
+margin-top: 20px;
+
+}
+ footer{
+padding: 40px 10% 0px;
+
+ }
+
+ .mai-footer{
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+
+
+ }
+
+ footer ul{
+    list-style: none;
+ }
+ 
+ footer ul li a{
+    text-decoration: none;
+ }
+ 
+ .mai-footer .footer ul li a{
+     
+     font-size: 14px;
+display: block;
+padding: 5px;
+color: white;
+
+}
+.footer ul li a:hover{
+    border-bottom: 1px solid black;
+    width: 60%;
+}
+
+
+ .footer h2{
+margin-bottom: 8px;
+color: white;
+transition: all 1.0s ease;
+
+
+ }
+ .footer h2:hover{
+    transform: scale(1.1);
+    border-bottom: 2px solid crimson;
+    width: 70%;
+    /* background-color: red; */
+    text-align: center;
+ }
+
+ .ion{
+    display: flex;
+
+}
+
+ .ion i{
+color: white;
+margin: 15px 10px 0px 0px;
+font-weight: 500;
+font-size: 25px;
+transition: all 1.0s ease;
+ }
+
+ .ion i:hover{
+    transform: scale(1.1);
+    color: rgb(192, 1, 1);
+ }
+
+ 
+ .rights{
+     
+     color: white;
+     padding: 4px;
+     text-align: center;
+     
+    }
+    #tent{
+        text-decoration: none;
+        font-size: 19px;
+        color: white;
+ }
+ .iconee{
+  display: flex;
+
+ }
+ #item4{
+  padding: 5px;
+  font-size: 25px;
+  margin: 10px;
+  color: black;
+ }
+ #item4:hover{
+
+color: brown;
+
+ }
+
+</style>
+<body>
+    
+
+
+
+    <header>
+        <div class="logo">
+            <!-- <img src="./furniture-logo-removebg-preview.png"> -->
+        </div>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid ">
+                <a class="navbar-brand " href="#"><img src="./images/furniture-logo-removebg-preview.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index2.html">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Branded
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-dark" href=".//indexB.html">Durable</a></li>
+                                <li><a class="dropdown-item text-dark" href="./2brnd.html">Woodstar</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-dark" href="./brand3.html">Lovenearth</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Product
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-dark" href=".//indexp.html">Sofa</a></li>
+                                <li><a class="dropdown-item text-dark" href="./indexpb.html">Bed</a></li>
+                               
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                Local item
+
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-dark" href="./indexc.html">chair</a></li>
+                                <li><a class="dropdown-item text-dark" href="./table.html">table</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            
+          <div class="iconee">
+           
+            <a href="./contact.html"><i id="item4" class="fa-solid fa-phone"></i></a>
+            <i id="item4" class="fa-solid fa-cart-shopping"></i>
+       
+            <i id="item4" class="fa-solid fa-heart"></i>
+            
+          </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container5">
+        <div class="left">
+
+            <img src="./images/images__1_-removebg-preview.png">
+        </div>
+        <div class="right">
+
+
+            <div class="left-col">
+
+                <h3>Cottage</h3>
+
+                <p>Furniture refers to (e.g., stools, chairs, and sofas), eating (tables), storing items, eating and/or
+                    working with an item, and sleeping (e.g., beds and hammocks). Furniture is also used to hold objects
+                    at a convenient height for work (as horizontal surfaces above the ground, such as tables and desks),
+                    or to store things (e.g., cupboards, shelves, and drawers). Furniture can be a product of design and
+                    can be considered a form of decorative art. In addition to furniture's functional role, it can serve
+                    a symbolic or religious purpose. It can be made from a vast multitude of materials, including metal,
+                    plastic, and wood. Furniture can be made using a variety of woodworking joints which often reflects
+                    the local culture..</p>
+                <div class="col">
+
+                    <div class="col1">
+
+                        <h5>Collection : serial #354521</h5>
+
+
+
+                    </div>
+                    <div class="col2">
+                        <h5>In stock : Price $195</h5>
+                    </div>
+
+                </div>
+                <button id="fn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> ADD TO
+                    CART</button>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 " id="exampleModalLabel">Durable</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-outline-dark">Oreder Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--footer-section start-->
+
+<footer id="footer-p">
+  
+    <div class="mai-footer">
+  
+      <div class="footer">
+        
+        <h2>Categories</h2>
+  <ul>
+    <li><a href="">Mattres</a></li>
+    <li><a href="">Living Room</a></li>
+    <li><a href="">Bedroom</a></li>
+    <li><a href="">Cosatal</a></li>
+    <li><a href="">Cottage</a></li>
+  </ul>
+  </div>
+      <div class="footer">
+        
+        <h2>Company</h2>
+  <ul>
+    <li><a href="">About us</a></li>
+    <li><a href="">Desgin service</a></li>
+    <li><a href="">Carees</a></li>
+    <li><a href="">Made in usa</a></li>
+    <li><a href="">Sale</a></li>
+  </ul>
+  </div>
+      <div class="footer">
+        
+        <h2>Resources</h2>
+  <ul>
+    <li><a href="">Privacy poilcy</a></li>
+    <li><a href="">ADA</a></li>
+    <li><a href="">Vacation</a></li>
+    <li><a href="">Protecition</a></li>
+    <li><a href="">home</a></li>
+  </ul>
+  </div>
+      <div class="footer">
+        
+        <h2>Durable</h2>
+  
+    <a id="tent" href="">About Links</a>
+  
+  
+  
+  
+  <div class="ion">
+  
+    <i class="fa-brands fa-google"></i>
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="fa-brands fa-instagram"></i>
+  </div>
+  </div>
+  </div>
+  <hr>
+  <div class="rights">
+    <p>Copyrights ©  2023. All Rights Bilal Devloment</p>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  </footer>
+  
+  
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

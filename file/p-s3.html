@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container-fluid {
+
+        height: 100px;
+
+    }
+
+
+
+    .container-fluid .navbar-brand img {
+        width: 200px;
+        height: 100px;
+    }
+
+
+    .navbar-nav {
+        color: black;
+        font-weight: 600px;
+
+
+    }
+
+    .nav-item {
+        padding: 5px;
+        font-size: larger;
+    }
+
+
+    .nav-item a:hover {
+        color: brown
+    }
+
+    .iconee {
+        display: flex;
+
+    }
+
+    #item4 {
+        padding: 5px;
+        font-size: 25px;
+        margin: 10px;
+        color: black;
+    }
+
+    #item4:hover {
+
+        color: brown;
+
+    }
+
+#gol{
+padding: 10px 40px;
+/* background-color: yellowgreen; */
+
+}
+.mannn1{
+    grid-gap: 1rem;
+justify-content: center;
+display: grid;
+align-items: center;
+grid-template-columns: 1fr 1fr;
+}
+
+
+@media only screen and (max-width:942px){
+
+.mannn1{
+display: grid;
+grid-template-columns: 1fr;
+text-align: center;
+
+}
+
+
+}
+
+.mannn1 h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+.imma{
+    text-align: center;
+    padding: 10px;
+    /* color: white; */
+box-shadow: 0px 10px 12px;
+}
+
+.imma img{
+    height: 600px;
+    width: 100%;
+}
+
+.text3{
+    align-items: center;
+padding: 10px;
+/* background-color: burlywood; */
+width: 100%;
+height: 400px;
+}
+
+@media only screen and (max-width:572px){
+
+.text3{
+
+    height: 780px;
+}
+
+}
+
+.textt{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.text3 p{
+    max-width: 900px;
+    /* line-height: 30px; */
+padding: 10px;
+font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+#opt{
+    border: 1px solid brown;
+    background-color: brown;
+/* width: 30%; */
+padding: 10px;
+color: white;
+outline: transparent;
+font-size: 19px;
+font-weight: 400;
+}
+
+#opt:hover{
+border: transparent;
+outline: transparent;
+background-color: rgb(51, 6, 6);
+
+}
+#footer-section{
+
+position: fixed;
+bottom: 0px;
+width: 100%;
+
+}
+
+#footer-p{
+background-color: rgb(73, 1, 1);
+margin-top: 20px;
+
+}
+ footer{
+padding: 40px 10% 0px;
+
+ }
+
+ .mai-footer{
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+
+
+ }
+
+ footer ul{
+    list-style: none;
+ }
+ 
+ footer ul li a{
+    text-decoration: none;
+ }
+ 
+ .mai-footer .footer ul li a{
+     
+     font-size: 14px;
+display: block;
+padding: 5px;
+color: white;
+
+}
+.footer ul li a:hover{
+    border-bottom: 1px solid black;
+    width: 60%;
+}
+
+
+ .footer h2{
+margin-bottom: 8px;
+color: white;
+transition: all 1.0s ease;
+
+
+ }
+ .footer h2:hover{
+    transform: scale(1.1);
+    border-bottom: 2px solid crimson;
+    width: 70%;
+    /* background-color: red; */
+    text-align: center;
+ }
+
+ .ion{
+    display: flex;
+
+}
+
+ .ion i{
+color: white;
+margin: 15px 10px 0px 0px;
+font-weight: 500;
+font-size: 25px;
+transition: all 1.0s ease;
+ }
+
+ .ion i:hover{
+    transform: scale(1.1);
+    color: rgb(192, 1, 1);
+ }
+
+ 
+ .rights{
+     
+     color: white;
+     padding: 4px;
+     text-align: center;
+     
+    }
+    #tent{
+        text-decoration: none;
+        font-size: 19px;
+        color: white;
+ }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid  ">
+            <a class="navbar-brand" href=""><img src="./images/furniture-logo-removebg-preview.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link" aria-current="page" href="./file/index2.html">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Branded
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="./indexB.html">Durable</a></li>
+                            <li><a class="dropdown-item text-dark" href="./2brnd.html">Woodstar</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-dark" href="./brand3.html">Lovenearth</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="./indexp.html">Sofa</a></li>
+                            <li><a class="dropdown-item text-dark" href="./indexpb.html">Bed</a></li>
+                            <li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Local item
+
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="./indexc.html">chair</a></li>
+                            <li><a class="dropdown-item text-dark" href="./table.html">Table</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="iconee">
+
+            <a href="./contact.html"><i id="item4" class="fa-solid fa-phone"></i></a>
+            <i id="item4" class="fa-solid fa-cart-shopping"></i>
+
+            <i id="item4" class="fa-solid fa-heart"></i>
+
+        </div>
+    </nav>
+
+
+
+
+<section id="gol">
+
+
+<div class="mannn1">
+<div class="imma">
+
+<h5>Sofa</h5>
+<img src="https://images.unsplash.com/photo-1519961655809-34fa156820ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c29mYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60">
+</div>
+
+<div class="text3">
+<div class="textt">
+<h3>Price:$5765</h3>
+<h3><del>$9876</del></h3>
+</div>
+<p>The concept of furniture first developed as early as 3100-2500 B.C. The first items created for household use were made of stone, as wood was not readily available during the Neolithic time period. Dressers, cupboards and beds were amongst the first forms of furniture. The dresser was said to be the most important piece of furniture in the beginning, as they faced the entrance of each house in Neolithic society and often displayed carved artwork of symbolic objects. Over the years, especially in modern years, the concept of functional furniture in households explode.</p>
+
+
+
+<button id="opt">Add to cart</button>
+</div>
+</div>
+</section>
+
+
+
+
+<!--footer-section start-->
+
+<footer id="footer-p">
+  
+    <div class="mai-footer">
+  
+      <div class="footer">
+        
+        <h2>Categories</h2>
+  <ul>
+    <li><a href="">Mattres</a></li>
+    <li><a href="">Living Room</a></li>
+    <li><a href="">Bedroom</a></li>
+    <li><a href="">Cosatal</a></li>
+    <li><a href="">Cottage</a></li>
+  </ul>
+  </div>
+      <div class="footer">
+        
+        <h2>Company</h2>
+  <ul>
+    <li><a href="">About us</a></li>
+    <li><a href="">Desgin service</a></li>
+    <li><a href="">Carees</a></li>
+    <li><a href="">Made in usa</a></li>
+    <li><a href="">Sale</a></li>
+  </ul>
+  </div>
+      <div class="footer">
+        
+        <h2>Resources</h2>
+  <ul>
+    <li><a href="">Privacy poilcy</a></li>
+    <li><a href="">ADA</a></li>
+    <li><a href="">Vacation</a></li>
+    <li><a href="">Protecition</a></li>
+    <li><a href="">home</a></li>
+  </ul>
+  </div>
+      <div class="footer">
+        
+        <h2>Durable</h2>
+  
+    <a id="tent" href="">About Links</a>
+  
+  
+  
+  
+  <div class="ion">
+  
+    <i class="fa-brands fa-google"></i>
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="fa-brands fa-instagram"></i>
+  </div>
+  </div>
+  </div>
+  <hr>
+  <div class="rights">
+    <p>Copyrights ©  2023. All Rights Bilal Devloment</p>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  </footer>
+  
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+crossorigin="anonymous"></script>
+</body>
+
+</html>

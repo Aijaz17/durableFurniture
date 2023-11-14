@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durable b/w</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box;
+  }
+
+  .container-fluid {
+
+    height: 100px;
+    /* position: fixed; */
+    /* background-color: aqua */
+  }
+
+
+
+  .container-fluid .navbar-brand img {
+    width: 200px;
+    height: 100px;
+  }
+
+
+  .navbar-nav {
+    color: black;
+    font-weight: 600px;
+    /* background-color: aqua */
+
+  }
+
+  .nav-item {
+    padding: 5px;
+    font-size: larger;
+  }
+
+
+  .nav-item a:hover {
+    color: brown
+  }
+
+  .carousel-inner {
+    height: 500px;
+    margin-top: 10px;
+
+  }
+
+  .carousel-item img {
+    height: 500px;
+  }
+
+
+  #brand {
+    /* background-color: aqua; */
+    padding: 10px 40px;
+    margin-top: 5%;
+  }
+
+  .brand2 {
+    /* background-color: yellowgreen; */
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  @media only screen and (max-width:784px) {
+    .brand2 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .brand3 {
+    /* background-color: yellow; */
+    width: 100%;
+    position: relative;
+  }
+
+  .brand3 img {
+    width: 100%;
+  }
+
+  .off {
+    background-color: rgb(92, 6, 6);
+    color: white;
+    padding: 10px;
+    left: 0;
+    top: 47px;
+    position: absolute;
+    font-weight: 800;
+  }
+
+  @media only screen and (max-width:1016px) {
+    .off {
+      top: 45px;
+    }
+
+    @media only screen and (max-width:870px) {
+      .off {
+        top: 42px;
+      }
+    }
+  }
+
+  @media only screen and (max-width:424px) {
+    .off {
+
+      top: 38px;
+      /* right: 10%; */
+    }
+  }
+
+  .text {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #para {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(100, 97, 97);
+  }
+
+  .icone i {
+    padding: 5px;
+    font-size: 18px;
+    transition: all 1.0s ease;
+
+  }
+
+  .icone i:hover {
+    background-color: rgb(61, 5, 15);
+    color: red;
+    border-radius: 250px;
+    transform: scale(1.1);
+    font-weight: bold;
+  }
+
+  #btn7 {
+    padding: 10px;
+    width: 50%;
+    border:1px solid black;
+    outline: transparent;
+  }
+
+
+  #btn7:hover {
+  
+    background-color: rgb(85, 7, 7);
+    color: white;
+    font-weight: bold;
+      
+    /* margin-bottom: 10% */
+
+  }
+
+  .vol h2 {
+    text-align: center;
+    /* font-size: 40px; */
+    font-style: initial;
+  }
+
+  #section {
+    padding: 10px 40px;
+  }
+
+  .main-col {
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-gap: 1rem;
+
+  }
+
+  @media only screen and (max-width:1272px) {
+    .main-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  }
+
+  @media only screen and (max-width:946px) {
+    .main-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+  }
+
+  @media only screen and (max-width:542px) {
+    .main-col {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .main-col4 {
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 10px 12px;
+    /* height: 00px; */
+    border-radius: 20px;
+  }
+
+  .main-col4 img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .lo {
+    /* background-color: aqua; */
+    padding: 10px;
+  }
+
+  .lo i {
+
+    font-size: 20px;
+    font-weight: 300px;
+  }
+
+  .lo i:hover {
+    color: red;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+
+  .main-col4 p {
+    font-family: 'Noto Serif', serif;
+    font-size: 20px;
+    max-width: 600px;
+    padding: 10px;
+    color: rgb(48, 43, 43);
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+
+  #paragh {
+    color: brown;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Noto Serif', serif;
+
+  }
+
+  #graph {
+    font-size: 20px;
+    color: rgb(83, 78, 78);
+    font-weight: 800;
+  }
+
+  #tbn {
+    padding: 10px;
+    border: 1px solid brown;
+    outline: transparent;
+    width: 50%;
+    background-color: brown;
+    color: white;
+    border-radius: 20px;
+  }
+
+  #tbn:hover {
+    background-color: white;
+    border: 1px solid brown;
+    color: black;
+
+  }
+
+  #uniq {
+    /* text-align: center; */
+    /* background-color: aqua; */
+    padding: 10px 40px;
+    /* margin-top: 5%; */
+  }
+
+  #uniq h4 {
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(46, 49, 51);
+  }
+
+  @media only screen and (max-width:416px) {
+
+    #uniq h4 {
+
+      font-size: 30px;
+
+    }
+
+  }
+
+  @media only screen and (max-width:338px) {
+
+    #uniq h4 {
+
+      font-size: 25px;
+
+    }
+
+  }
+
+  .mont {
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 400px;
+  }
+
+  .mont img {
+    width: 100%;
+    height: 400px;
+  }
+
+  .mont1 {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 10px;
+  }
+
+  @media only screen and (max-width:790px) {
+    .mont1 {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  .mont1 img {
+    width: 100%;
+  }
+
+  .mon2 {
+    position: relative;
+  }
+
+  .on {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    left: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  }
+
+  .mont {
+    position: relative;
+  }
+
+
+  .of {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(97, 31, 7);
+    padding: 10px;
+    font-weight: 700;
+  }
+
+
+  .pre {
+    padding: 10px;
+
+    position: absolute;
+    justify-content: center;
+    top: 38%;
+    /* margin: auto; */
+    /* background-color: blue; */
+    /* right: 10%; */
+    font-size: 30px;
+    /* width: 100 %; */
+    max-width: 900px;
+    opacity: 0;
+    transition: all 1.0s ease;
+  }
+
+  .pre:hover {
+    transform: scale(1.1.0);
+    opacity: 100%;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
+  }
+
+  #footer-section {
+
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+  }
+
+  #footer-p {
+    background-color: rgb(73, 1, 1);
+    margin-top: 20px;
+
+  }
+
+  footer {
+    padding: 40px 10% 0px;
+
+  }
+
+  .mai-footer {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+
+
+  }
+
+  footer ul {
+    list-style: none;
+  }
+
+  footer ul li a {
+    text-decoration: none;
+  }
+
+  .mai-footer .footer ul li a {
+
+    font-size: 14px;
+    display: block;
+    padding: 5px;
+    color: white;
+
+  }
+
+  .footer ul li a:hover {
+    border-bottom: 1px solid black;
+    width: 60%;
+  }
+
+
+  .footer h2 {
+    margin-bottom: 8px;
+    color: white;
+    transition: all 1.0s ease;
+
+
+  }
+
+  .footer h2:hover {
+    transform: scale(1.1);
+    border-bottom: 2px solid crimson;
+    width: 70%;
+    /* background-color: red; */
+    text-align: center;
+  }
+
+  .ion {
+    display: flex;
+
+  }
+
+  .ion a {
+    color: white;
+    margin: 15px 10px 0px 0px;
+    font-weight: 500;
+    font-size: 25px;
+    transition: all 1.0s ease;
+  }
+
+  .ion i a:hover {
+    transform: scale(1.1);
+    color: rgb(192, 1, 1);
+  }
+
+
+  .rights {
+
+    color: white;
+    padding: 4px;
+    text-align: center;
+
+  }
+
+  #tent {
+    text-decoration: none;
+    font-size: 19px;
+    color: white;
+  }
+
+  .iconee {
+    display: flex;
+
+  }
+
+  #item4 {
+    padding: 5px;
+    font-size: 25px;
+    margin: 10px;
+    color:black;
+  }
+
+  #item4:hover {
+
+    color: brown;
+
+  }
+</style>
+
+
+
+<body>
+
+
+
+  <header>
+    <div class="logo">
+      <!-- <img src="./furniture-logo-removebg-preview.png"> -->
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid  ">
+        <a class="navbar-brand" href=""><img src="./images/furniture-logo-removebg-preview.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+
+            <li class="nav-item ">
+              <a class="nav-link" aria-current="page" href="index2.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Branded
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-dark" href="indexB.html">Durable</a></li>
+                <li><a class="dropdown-item text-dark" href="./2brnd.html">Woodstar</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-dark" href="./brand3.html">Lovenearth</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Product
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-dark" href="./indexp.html">Sofa</a></li>
+                <li><a class="dropdown-item text-dark" href="./indexpb.html">Bed</a></li>
+               
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+
+                Local item
+
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-dark" href="./indexc.html">chair</a></li>
+                <li><a class="dropdown-item text-dark" href="./table.html">Table</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+
+
+      <div class="iconee">
+
+        <a href="./contact.html"><i id="item4" class="fa-solid fa-phone"></i></a>
+
+        <i id="item4" class="fa-solid fa-cart-shopping"></i>
+
+        <i id="item4" class="fa-solid fa-heart"></i>
+
+      </div>
+    </nav>
+  </header>
+
+
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <img src="./images/istockphoto-1409268327-170667a.jpg" class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/istockphoto-1409362203-170667a.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/istockphoto-1368578033-170667a.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+  <section id="brand">
+
+    <div class="brand2">
+
+      <div class="brand3">
+        <div class="vol">
+          <h2>Woodstar</h2>
+          <img src="./images/download (5).jpg">
+
+
+          <div class="text">
+
+            <p id="para">Price:R.s $300</p>
+            <div class="icone">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-heart"></i>
+
+            </div>
+
+          </div>
+          <button id="btn7">Order Now</button>
+          <div class="off">
+            50%off
+          </div>
+
+
+
+
+        </div>
+      </div>
+      <div class="brand3">
+        <div class="vol">
+          <h2>Woodstar</h2>
+          <img src="./images/images (1).jpg">
+          <div class="text">
+
+            <p id="para">Price:R.s $600</p>
+            <div class="icone">
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-heart"></i>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <button id="btn7">Order Now</button>
+
+        <div class="off">
+          50%off
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section">
+
+    <div class="main-col">
+
+      <div class="main-col4">
+        <div class="lo">
+
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+
+        <img src="./images/images (14).jpg">
+
+        <p>working with an item, and sleeping e.g., beds and to hold objects at. </p>
+
+        <div class="flex">
+          <p id="paragh">$908.99</p>
+
+          <p><del>
+              908548
+            </del></p>
+        </div>
+        <h6 style="text-align: center;"><button id="tbn">
+          ADD TO CART
+        </button></h6>
+      </div>
+
+      <div class="main-col4">
+        <div class="lo">
+
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+
+        <img src="./images/images (11).jpg">
+
+        <p>working with an item, and sleeping e.g., beds and to hold objects at.</p>
+
+        <div class="flex">
+          <p id="paragh">$908.99</p>
+
+
+          <p id="grahp"><del>
+              908348
+            </del></p>
+        </div>
+        <h6 style="text-align: center;"><button id="tbn">
+          ADD TO CART
+        </button></h6>
+      </div>
+
+      <div class="main-col4">
+        <div class="lo">
+
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+
+        <img src=".//images/images (12).jpg">
+
+        <p>working with an item, and sleeping e.g., beds and to hold objects at.</p>
+
+        <div class="flex">
+          <p id="paragh">$908.99</p>
+
+
+          <p id="grahp"><del>
+
+              96577
+
+            </del></p>
+
+
+
+        </div>
+        <h6 style="text-align: center;"><button id="tbn">
+          ADD TO CART
+        </button></h6>
+      </div>
+
+      <div class="main-col4">
+        <div class="lo">
+
+          <i class="fa-regular fa-heart"></i>
+        </div>
+
+
+        <img src="./images/images (18).jpg">
+
+        <p>working with an item, and sleeping e.g., beds and to hold objects.</p>
+
+        <div class="flex">
+          <p id="paragh">$908.99</p>
+
+          <p id="grahp"><del>
+              208548
+            </del></p>
+        </div>
+        <h6 style="text-align: center;"><button id="tbn">
+          ADD TO CART
+        </button></h6>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="uniq">
+
+    <h4>Shop by Style</h4>
+    <div class="mont">
+      <img src="./images/istockphoto-1345966303-170667a.jpg">
+
+      <div class="pre">
+        <p>Furniture refers to (e.g., stools, chairs, and sofas), eating (tables),</p>
+      </div>
+      <div class="of">
+
+        40%Off
+
+      </div>
+    </div>
+    <div class="mont1">
+      <div class="mon2">
+        <img src="./images/istockphoto-1329937916-170667a.jpg">
+        <div class="on">
+          Discount On
+        </div>
+      </div>
+      <div class="mon2">
+        <img src="./images/photo-1522771739844-6a9f6d5f14af.avif">
+
+        <div class="on">
+          Discount On
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <!--footer-section start-->
+
+  <footer id="footer-p">
+
+    <div class="mai-footer">
+
+      <div class="footer">
+
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="">Mattres</a></li>
+          <li><a href="">Living Room</a></li>
+          <li><a href="">Bedroom</a></li>
+          <li><a href="">Cosatal</a></li>
+          <li><a href="">Cottage</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+
+        <h2>Company</h2>
+        <ul>
+          <li><a href="">About us</a></li>
+          <li><a href="">Desgin service</a></li>
+          <li><a href="">Carees</a></li>
+          <li><a href="">Made in usa</a></li>
+          <li><a href="">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="">Privacy poilcy</a></li>
+          <li><a href="">ADA</a></li>
+          <li><a href="">Vacation</a></li>
+          <li><a href="">Protecition</a></li>
+          <li><a href="">home</a></li>
+        </ul>
+      </div>
+      <div class="footer">
+
+        <h2>Durable</h2>
+
+        <a id="tent" href="">About Links</a>
+
+
+
+
+        <div class="ion">
+
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="rights">
+      <p>Copyrights © 2023. All Rights Bilal Devloment</p>
+    </div>
+
+
+
+
+
+
+
+  </footer>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
